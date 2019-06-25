@@ -1,4 +1,6 @@
 .content
   .title
     = @user.name
+  .paginate
+    = paginate(@blogs)
   = render partial: 'blogs/blog', collection: @blogs
