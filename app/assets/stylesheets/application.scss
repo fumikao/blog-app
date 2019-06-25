@@ -10,6 +10,62 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require font-awesome
  *= require_tree .
  *= require_self
  */
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.content {
+  padding: 70px 0 80px;
+}
+
+.card {
+  width: 30rem;
+  margin: 20px auto;
+}
+
+.form {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  background: #f8f9fa;
+  &__text {
+    border: solid 1px lightgray;
+    border-radius: 5px;
+    padding: 10px;
+    height: 40px;
+    margin: 20px;
+    width: calc(100% - 120px);
+  }
+  &__file {
+    cursor: pointer;
+    position: absolute;
+    right: 110px;
+    bottom: 18px;
+    i {
+      font-size: 1.5em;
+      color: gray;
+    }
+    &--default {
+      display: none;
+    }
+  }
+  &__btn {
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+  }
+}
+
+.title {
+  font-size: 30px;
+  width: 100%;
+  text-align: center;
+}
