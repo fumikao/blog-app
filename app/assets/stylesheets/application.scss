@@ -25,8 +25,18 @@ li {
   z-index: 2;
 }
 
+.home::before {
+  font-family: FontAwesome;
+  content: '\f015';
+  padding-right: 10px;
+  color: #007bff;
+}
+
 .content {
   padding: 70px 0 80px;
+  &__devise {
+    margin: 10px 30px;
+  }
 }
 
 .card {
