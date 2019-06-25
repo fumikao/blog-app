@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   root 'blogs#index'
   resources :blogs, exceprt: :new do
     resources :comments, except: [:index, :new, :show]
-    resources :likes, only: [:create, :destroy]
   end
-  resources :users, only: [:show]
+  resources :users, only: [:index, :show]
+
+  post '/blogs/:blog_id/likes' => "likes#create"
+  delete '/blogs/:blog_id/likes' => "likes#destroy"
+  get '/users/:user_id/likes' => "likes#show"
+  
 end
