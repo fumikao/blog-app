@@ -9,13 +9,6 @@
       - if blog.image
         = image_tag(blog.image)
     - if user_signed_in?
-      - if Like.find_by(blog_id: blog.id, user_id: current_user.id)
-        = link_to "/blogs/#{blog.id}/likes", method: :delete do
-          = fa_icon 'heart', class: "heart heart-red"
-      - else
-        = link_to "/blogs/#{blog.id}/likes", method: :post do
-          = fa_icon 'heart', class: "heart"
-      = blog.likes.length
       = link_to "コメント", blog_path(blog), class: "card-link"
       - if blog.user == current_user
         = link_to "編集", edit_blog_path(blog), class: "card-link"
