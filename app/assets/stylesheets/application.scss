@@ -27,12 +27,17 @@ li {
 
 .content {
   padding: 70px 0 80px;
-  margin: 0 10px;
 }
 
 .card {
   width: 30rem;
   margin: 20px auto;
+  a {
+    text-decoration: none;
+  }
+  &-link {
+    margin-left: 10px;
+  }
 }
 
 .form {
@@ -75,10 +80,8 @@ li {
   text-align: center;
 }
 
+
 .heart {
-  a {
-    text-decoration: none;
-  }
   &:hover {
     font-size: 1.2em;
   }
