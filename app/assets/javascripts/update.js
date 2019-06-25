@@ -12,10 +12,11 @@ $(function(){
       contentType: false
     })
     .done(function(data){
-      var text = $('.card-text').next();
+      var textBox = $('.card-text').next();
+      var text = data.content.replace(/\n|\r\n|\r/g, '<br>');
       var image = data.image ? `${data.image}` : ""
-      $(text).text(data.content);
-      $(text).next().attr('src', image);
+      $(textBox).html(text);
+      $(textBox).next().attr('src', image);
       $('.edit_blog').val(text);
 
     })

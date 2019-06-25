@@ -1,6 +1,8 @@
 $(function(){
   function buildHTML(blog){
     var content = blog.content ? `${blog.content}` : "";
+    // 改行コード \n|\r\n|\r を <br> に置き換える
+    var text = content.replace(/\n|\r\n|\r/g, '<br>');
     var image = blog.image ? `<img src=${blog.image}>` : "";
     var html = `<div class="card">
                   <div class="card-body">
@@ -12,8 +14,7 @@ $(function(){
                     </h6>
                     <p class="card-text">
                     </p>
-                    <p>${content}</p>
-                    ${image}
+                    <p>${text}</p>${image}
                     <p></p>
                     <a rel="nofollow" data-method="post" href="/blogs/${blog.id}/likes"><i class="fa fa-heart heart"></i>
                     </a>${blog.likes}

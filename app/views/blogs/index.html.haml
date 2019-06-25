@@ -6,7 +6,7 @@
     - if user_signed_in?
       = form_for @blog do |f|
         .form
-          = f.text_field :content, placeholder: "#{@blog.content}", class: "form__text"
+          = f.text_area :content, placeholder: "#{@blog.content}", class: "form__text"
           = f.label :image, class: "form__file" do
             = fa_icon 'image'
           = f.file_field :image, class: "form__file--default"
