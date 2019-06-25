@@ -15,6 +15,10 @@
  *= require_self
  */
 
+li {
+  list-style: none;
+}
+
 .header {
   position: fixed;
   width: 100%;
@@ -68,4 +72,16 @@
   font-size: 30px;
   width: 100%;
   text-align: center;
+}
+
+.heart {
+  a {
+    text-decoration: none;
+  }
+  &:hover {
+    font-size: 1.2em;
+  }
+  &-red {
+    color: pink;
+  }
 }
