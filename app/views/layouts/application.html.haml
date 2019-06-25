@@ -12,9 +12,9 @@
   %body
     .header
       %nav.navbar.navbar-expand-lg.navbar-light.bg-light
-        = link_to "BlogApp", root_path, class: "navbar-brand"
         %button.navbar-toggler{type: "button", "data-toggle": "collapse", "data-target": "#navbarNavAltMarkup", "aria-controls": "navbarNavAltMarkup", "aria-expanded":"false", "aria-label": "Toggle navigation"}
           %span.navbar-toggler-icon
+        = link_to "BlogApp", root_path, class: "navbar-brand"
         .collapse.navbar-collapse#navbarNavAltMarkup
           .navbar-nav
             - if user_signed_in?
