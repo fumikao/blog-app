@@ -28,7 +28,10 @@ class BlogsController < ApplicationController
 
   def update
     if @blog.update(blog_params)
-      redirect_to root_path
+      respond_to do |format|
+        format.html{redirect_to edit_blog_path(@blog)}
+        format.json
+      end
     else
       render 'edit'
     end
