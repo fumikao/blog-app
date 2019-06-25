@@ -1,6 +1,4 @@
 .content
-  .paginate
-    = paginate(@blogs)
   .blogs
     = render partial: 'blog', collection: @blogs
     - if user_signed_in?
@@ -11,3 +9,5 @@
             = fa_icon 'image'
           = f.file_field :image, class: "form__file--default"
           = f.submit "投稿", class: "btn btn-primary form__btn"
+  .paginate
+    = paginate(@blogs)
