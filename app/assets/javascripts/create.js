@@ -16,8 +16,6 @@ $(function(){
                     </p>
                     <p>${text}</p>${image}
                     <p></p>
-                    <a rel="nofollow" data-method="post" href="/blogs/${blog.id}/likes"><i class="fa fa-heart heart"></i>
-                    </a>${blog.likes}
                     <a class="card-link" href="/blogs/${blog.id}">コメント</a>
                     <a class="card-link" href="/blogs/${blog.id}/edit">編集</a>
                     <a class="card-link" rel="nofollow" data-method="delete" href="/blogs/${blog.id}">削除</a>
@@ -29,9 +27,8 @@ $(function(){
   $('#new_blog').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
-    var url = $(this).attr('action');
     $.ajax({
-      url: url,
+      url: '/blogs',
       type: 'POST',
       data: formData,
       dataType: 'json',
