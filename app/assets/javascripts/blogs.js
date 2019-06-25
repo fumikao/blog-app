@@ -13,7 +13,7 @@ $(function(){
                     <p class="card-text">
                     </p>
                     <p>${content}</p>
-                    <img src="${image}">
+                    ${image}
                     <p></p>
                     <a rel="nofollow" data-method="post" href="/blogs/${blog.id}/likes"><i class="fa fa-heart heart"></i>
                     </a>${blog.likes}
@@ -39,7 +39,7 @@ $(function(){
     })
     .done(function(data){
       var html = buildHTML(data);
-      $('.content').prepend(html);
+      $('.blogs').prepend(html);
       $('#new_blog')[0].reset();
     })
     .fail(function(){
