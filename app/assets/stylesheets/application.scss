@@ -26,6 +26,8 @@ li {
 }
 
 .home {
+  margin: 0 auto;
+  width: 55%;
   &::before {
     font-family: FontAwesome;
     content: '\f015';
