@@ -19,6 +19,7 @@
           .navbar-nav
             - if user_signed_in?
               = link_to "マイページ", user_path(current_user), class: "nav-item nav-link"
+              = link_to "ユーザー一覧", users_path, class: "nav-item nav-link"
               = link_to "サインアウト", destroy_user_session_path, method: :delete, class: "nav-item nav-link"
             - else
               = link_to "新規登録", new_user_registration_path, class: "nav-item nav-link"
