@@ -3,7 +3,7 @@ $(function(){
     var content = blog.content ? `${blog.content}` : "";
     // 改行コード \n|\r\n|\r を <br> に置き換える
     var text = content.replace(/\n|\r\n|\r/g, '<br>');
-    var image = blog.image ? `<img src=${blog.image}>` : "";
+    var image = blog.image ? `<img src=${blog.image}>` : " ";
     var html = `<div class="card">
                   <div class="card-body">
                     <h5 class="card-title">
@@ -14,9 +14,9 @@ $(function(){
                     </h6>
                     <p class="card-text">
                     </p>
-                    <p>${text}</p>${image}
-                    <p></p>
-                    <a class="card-link" href="/blogs/${blog.id}">コメント</a>
+                    <p>${text}</p>
+                    <p>${image}</p>
+                    <a class="card-link" href="/blogs/${blog.id}">コメント(0)</a>
                     <a class="card-link" href="/blogs/${blog.id}/edit">編集</a>
                     <a class="card-link" rel="nofollow" data-method="delete" href="/blogs/${blog.id}">削除</a>
                   </div>

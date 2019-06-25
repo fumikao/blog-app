@@ -6,10 +6,10 @@
       = blog.created_at.strftime("%Y/%m/%d(%a) %H:%M")
     %p.card-text
       = simple_format(blog.content)
-      - if blog.image
+      - if blog.image?
         = image_tag(blog.image)
     - if user_signed_in?
-      = link_to "コメント", blog_path(blog), class: "card-link"
+      = link_to "コメント(#{blog.comments.length})", blog_path(blog), class: "card-link"
       - if blog.user == current_user
         = link_to "編集", edit_blog_path(blog), class: "card-link"
         = link_to "削除", "/blogs/#{blog.id}", method: :delete, class: "card-link"

@@ -6,11 +6,12 @@
         コメント(
         = @blog.comments.length
         )
-      - @comments.each do |comment|
-        %p
-          = comment.user.name
-          ：
-          = comment.content
+      #comments
+        - @comments.each do |comment|
+          %p
+            = comment.user.name
+            ：
+            = comment.content
   = form_for [@blog, @comment] do |f|
     .form
       = f.text_field :content, placeholder: "コメント", class: "form__text"

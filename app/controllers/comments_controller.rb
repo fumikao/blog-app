@@ -1,23 +1,14 @@
 class CommentsController < ApplicationController
   def create
-    comment = Comment.new(comment_params)
-    if comment.save
-      redirect_to blog_path(comment.blog)
+    @comment = Comment.new(comment_params)
+    if @comment.save
+      respond_to do |format|
+        format.html
+        format.json
+      end
     else
       render 'blogs/show'
     end
-  end
-
-  def edit
-
-  end
-
-  def update
-
-  end
-
-  def destroy
-    
   end
 
   private

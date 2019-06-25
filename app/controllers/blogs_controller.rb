@@ -20,7 +20,7 @@ class BlogsController < ApplicationController
 
   def show
     @comment = Comment.new
-    @comments = Comment.where(blog_id: @blog.id)
+    @comments = Comment.where(blog_id: @blog.id).order("created_at DESC")
   end
 
   def edit
