@@ -18,7 +18,6 @@ $(function(){
       $(textBox).html(text);
       $(textBox).next().attr('src', image);
       $('.edit_blog').val(text);
-
     })
     .fail(function(){
       alert('送信に失敗しました')
