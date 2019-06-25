@@ -2,14 +2,17 @@ class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
 
   def index
-    @blogs = Blog.all.order("created_at DESC").page(params[:page]).per(20)
+    @blogs = Blog.all.order("created_at DESC").page(params[:page]).per(10)
     @blog = Blog.new
   end
 
   def create
     @blog = Blog.new(blog_params)
     if @blog.save
-      redirect_to root_path
+      respond_to do |format|
+        format.html{redirect_to root_path}
+        format.json
+      end
     else
       render 'index'
     end
