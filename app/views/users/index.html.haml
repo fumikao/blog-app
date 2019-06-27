@@ -1,4 +1,4 @@
 .content
   .list-group
     - @users.each do |user|
-      = link_to user.name, user_path(user), class: "list-group-item list-group-item-action"
+      = link_to "#{user.name}：#{user.blogs.length}", user_path(user), class: "list-group-item list-group-item-action"
