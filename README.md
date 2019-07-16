@@ -1,24 +1,19 @@
-# README
+Blog-app
+====
+## 概要
+ブログ投稿ができるアプリケーションです。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 機能
+- 新規登録・ログイン・ログアウト
+- ブログ投稿・編集・削除
+- 画像投稿
+- コメント投稿
+- ユーザー一覧
+- ページネーション
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 使用技術
+- Ruby
+- Ruby on Rails
+- jQuery
+- Bootstrap
+- MySQL
