@@ -2,16 +2,14 @@
   = render partial: "blog", locals: {blog: @blog}
   .card
     .card-body
-      %h5.card-title
+      %h5.card-title#comment-length
         コメント(
         = @blog.comments.length
         )
       #comments
         - @comments.each do |comment|
           %p
-            = comment.user.name
-            ：
-            = comment.content
+            ="#{comment.user.name}：#{comment.content}"
   = form_for [@blog, @comment] do |f|
     .form
       = f.text_field :content, placeholder: "コメント", class: "form__text"
